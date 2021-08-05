@@ -1,0 +1,32 @@
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <div>
+      <form action="/schedule/add" method="POST">
+        <label for="conference">Conference:</label>
+        <input type="text" id="conference" name="conference" required />
+        <label for="room">Room:</label>
+        <input type="text" id="room" name="room" required />
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+        <label for="person">Person:</label>
+        <input type="text" id="person" name="person" required /
+        <label for="day">Day:</label>
+        <input type="text" id="day" name="day" required />
+        <label for="startingHour">Starting Hour:</label>
+        <input type="text" id="startingHour" name="startingHour" required />
+        <label for="startingMinute">Starting Minute:</label>
+        <input type="text" id="startingMinute" name="startingMinute" required />
+        <label for="endingHour">Ending Hour:</label>
+        <input type="text" id="endtingHour" name="endingHour" required />
+        <label for="endingMinute">Ending Minute:</label>
+        <input type="text" id="endtingMinute" name="endingMinute" required />
+        <label for="notes">Notes:</label>
+        <textarea id="notes" required name="notes"></textarea>
+        <label for="alert">Alert:</label>
+        <input type="text" id="alert" name="alert" />
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
