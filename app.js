@@ -8,7 +8,7 @@ const dbURI =
   "mongodb+srv://user1:haslo321@chairman.7penp.mongodb.net/chairman-app?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then((resolved) => app.listen(3000), console.log("connected to db"))
+  .then((resolved) => app.listen(5000), console.log("connected to db"))
   .catch((err) => console.log(err));
 
 // middleware & static files
