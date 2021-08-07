@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const schedule_itemRoutes = require("./routes/schedule_itemRoutes");
+const cors = require("cors");
 
 const app = express();
 
@@ -12,6 +13,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // middleware & static files
+app.use(cors());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //accepting form data
