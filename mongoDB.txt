@@ -1,0 +1,11 @@
+MongoDB Atlas
+aplikacja chairman, login with google account!
+
+u: chairman.app@gmail.com
+p: chairman654
+
+Access to db
+u: user1	
+p: haslo321
+
+mongodb+srv://user1:<password>@chairman.7penp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

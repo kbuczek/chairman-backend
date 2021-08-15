@@ -28,6 +28,7 @@ const add_get = (req, res) => {
 };
 
 const add_post = (req, res) => {
+  console.log("REQ.BODY", req);
   const schedule_item = new Schedule_item(req.body);
 
   schedule_item
@@ -45,7 +46,7 @@ const delete_item = (req, res) => {
   const id = req.params.id;
   Schedule_item.findByIdAndDelete(id)
     .then((result) => {
-      res.json({ redirect: "/schedule" });
+      res.json({ delete: "true" });
     })
     .catch((err) => {
       console.log(err);
