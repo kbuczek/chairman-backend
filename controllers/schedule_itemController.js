@@ -28,7 +28,6 @@ const add_get = (req, res) => {
 };
 
 const add_post = (req, res) => {
-  console.log("REQ.BODY", req);
   const schedule_item = new Schedule_item(req.body);
 
   schedule_item

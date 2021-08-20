@@ -20,7 +20,7 @@ app.use(
 );
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(express.urlencoded()); //accepting form data
+app.use(express.urlencoded({ extended: true })); //accepting form data
 app.use(express.json());
 app.get("/", (req, res) => {
   res.redirect("/schedule");
