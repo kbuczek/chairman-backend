@@ -13,4 +13,6 @@ router.get("/:id", schedule_itemController.single_item);
 
 router.delete("/:id", schedule_itemController.delete_item);
 
+router.post("/update/:id", schedule_itemController.update_item);
+
 module.exports = router;

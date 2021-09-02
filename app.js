@@ -11,6 +11,7 @@ mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((resolved) => app.listen(5000), console.log("connected to db"))
   .catch((err) => console.log(err));
+mongoose.set("useFindAndModify", false);
 
 // middleware & static files
 app.use(
@@ -19,6 +20,7 @@ app.use(
   })
 );
 app.set("view engine", "ejs");
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //accepting form data
 app.use(express.json());

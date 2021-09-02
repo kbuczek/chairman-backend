@@ -24,7 +24,7 @@ const single_item = (req, res) => {
 };
 
 const add_get = (req, res) => {
-  res.render("add", { title: "Doddaj nowy wykład" });
+  res.render("add", { title: "Dodaj nowy wykład" });
 };
 
 const add_post = (req, res) => {
@@ -53,10 +53,25 @@ const delete_item = (req, res) => {
     });
 };
 
+const update_item = (req, res) => {
+  const id = req.params.id;
+  let body = req.body;
+  delete body._id;
+  Schedule_item.findByIdAndUpdate(id, body, (err) => {
+    if (err) {
+      console.log(err);
+      res.send({ update: "false" });
+    } else {
+      res.send({ update: "true" });
+    }
+  });
+};
+
 module.exports = {
   all_items,
   single_item,
   add_get,
   add_post,
   delete_item,
+  update_item,
 };
